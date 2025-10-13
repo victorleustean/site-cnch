@@ -10,7 +10,11 @@ import toogle_dark from '../../assets/day.png'
 
 
 
-const Navbar = () => {
+const Navbar = ({theme, setTheme}) => {
+
+    const toggle_mode = () => {
+        theme == 'light' ? setTheme('dark') : setTheme('light');
+    }
     return(
         <div className='navbar'>
             <img src={logo_light} alt="" className='logo'/>
